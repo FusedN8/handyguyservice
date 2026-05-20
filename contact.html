@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Handyguyservice</title>
+  <meta name="description" content="Contact us. Please fill out the form below and we will reply asap.">
+  <link rel="icon" href="assets/images/favicon.jpg" sizes="32x32">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=3">
+</head>
+<body class="has-mobile-cta">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="HandyGuy Service home">
+        <img src="assets/images/logo.png" alt="HandyGuy Service" width="300" height="34">
+      </a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <div class="nav-panel">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#previous-work">Our Work</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+          <a href="contact.html" class="btn btn-nav">Request Service</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="contact-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Fill out the form below and we'll reply as soon as possible.</p>
+    </div>
+  </section>
+
+  <section class="contact-form-section">
+    <div class="container">
+      <div class="contact-form-card">
+        <div id="form-success" class="form-success" role="status">
+          Thank you! Your message has been sent. We'll reply as soon as possible.
+        </div>
+        <form id="contact-form" class="contact-form" action="https://formsubmit.co/handyguyserviceinfo@gmail.com" method="POST" aria-label="Contact form">
+          <input type="hidden" name="_subject" value="New contact — HandyGuy Service">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" id="form-next" value="">
+          <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project…"></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/images/logo.png" alt="HandyGuy Service" width="220" height="25">
+        <p>Professional handyman services in Los Angeles and West LA.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#previous-work">Our Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://www.taskrabbit.com/profile/nathaniel-r" rel="nofollow noopener" target="_blank">TaskRabbit Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Get in touch</h3>
+        <p><a href="mailto:handyguyserviceinfo@gmail.com">handyguyserviceinfo@gmail.com</a></p>
+        <p class="footer-area">Serving Los Angeles &amp; West LA</p>
+      </div>
+    </div>
+    <p class="footer-copy">Handyguy Service. Copyright 2026-2027.</p>
+  </footer>
+
+  <a href="contact.html" class="mobile-cta btn">Request Service</a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
