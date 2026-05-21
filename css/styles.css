@@ -908,10 +908,34 @@ body.lightbox-open {
 
 /* CTA band */
 .cta-band {
-  background: linear-gradient(135deg, var(--color-primary) 0%, #2a2a2a 100%);
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(224, 112, 32, 0.16) 0%, transparent 42%),
+    linear-gradient(135deg, var(--color-primary) 0%, #2a2a2a 100%);
   color: var(--color-white);
   text-align: center;
   padding: 4rem 1rem;
+}
+
+.cta-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.045) 0,
+    rgba(255, 255, 255, 0.045) 1px,
+    transparent 1px,
+    transparent 18px
+  );
+  opacity: 0.36;
+  pointer-events: none;
+}
+
+.cta-band .container {
+  position: relative;
+  z-index: 1;
 }
 
 .cta-band h2 {
@@ -934,16 +958,48 @@ body.lightbox-open {
 
 
 .cta-reviews {
+  position: relative;
   color: var(--color-white);
-  text-decoration: underline;
   font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cta-reviews::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.2rem;
+  height: 2px;
+  background: var(--color-accent);
+  transform: scaleX(0.5);
+  transform-origin: left;
+  transition: transform 0.18s ease;
+}
+
+.cta-reviews:hover::after,
+.cta-reviews:focus-visible::after {
+  transform: scaleX(1);
 }
 
 /* Footer */
 .site-footer {
-  background: var(--color-primary);
+  position: relative;
+  background:
+    linear-gradient(180deg, #202020 0%, var(--color-primary) 100%);
   color: var(--color-secondary);
   padding: 3rem 1rem 2rem;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  right: 1rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(225, 196, 130, 0.85), transparent);
 }
 
 .footer-grid {
@@ -984,14 +1040,17 @@ body.lightbox-open {
 
 .footer-links a,
 .footer-contact a {
+  display: inline-block;
   color: var(--color-secondary);
   text-decoration: none;
   font-size: 0.95rem;
+  transition: color 0.16s ease, transform 0.16s ease;
 }
 
 .footer-links a:hover,
 .footer-contact a:hover {
   color: var(--color-orange);
+  transform: translateX(3px);
 }
 
 .footer-links li {
