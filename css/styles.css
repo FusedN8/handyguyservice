@@ -738,23 +738,8 @@ body.lightbox-open {
 
 .service-card:last-child {
   grid-column: 1 / -1;
-  align-items: center;
-  justify-content: center;
-  padding: 1.25rem 1.5rem;
-  background:
-    linear-gradient(135deg, rgba(224, 112, 32, 0.11), rgba(225, 196, 130, 0.16)),
-    var(--color-white);
-  border-color: rgba(224, 112, 32, 0.18);
-  text-align: center;
-}
-
-.service-card:last-child .service-icon {
-  background: var(--color-primary);
-  color: var(--color-accent);
-}
-
-.service-card:last-child strong {
-  font-size: 1rem;
+  width: min(100%, 288px);
+  justify-self: center;
 }
 
 /* Testimonials */
@@ -874,13 +859,14 @@ body.lightbox-open {
 
 /* Calendar */
 .calendar-card {
-  max-width: 860px;
+  width: min(100% - 2rem, 960px);
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: clamp(0.75rem, 2vw, 1.5rem);
   background: var(--color-white);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   text-align: center;
+  overflow: hidden;
 }
 
 .calendar-card p {
@@ -888,10 +874,11 @@ body.lightbox-open {
   color: var(--color-muted);
 }
 
-.calendar-wrap iframe {
+.calendar-card iframe {
   border: 0;
   width: 100%;
-  min-height: 400px;
+  height: clamp(360px, 58vw, 520px);
+  min-height: 360px;
   border-radius: 6px;
 }
 
