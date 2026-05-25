@@ -85,6 +85,17 @@ h1 {
   gap: 16px;
 }
 
+.tally-embed-wrap {
+  min-height: 520px;
+}
+
+.tally-embed {
+  width: 100%;
+  min-height: 520px;
+  border: 0;
+  display: block;
+}
+
 .field-group {
   display: grid;
   gap: 8px;

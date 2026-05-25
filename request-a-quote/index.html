@@ -21,50 +21,22 @@
         </div>
       </header>
 
-      <form class="quote-form" data-quote-form data-mode="new_client" enctype="multipart/form-data">
-        <input type="hidden" name="mode" value="new_client">
-        <input type="hidden" name="_subject" value="New quote request - HandyGuy Service">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-
-        <label class="field-group" for="description">
-          <span>Project description</span>
-          <textarea id="description" name="description" placeholder="Briefly describe what you need done." rows="7" required></textarea>
-        </label>
-
-        <label class="upload-box" for="attachment">
-          <input id="attachment" name="attachment" type="file" accept="image/*" multiple data-file-input>
-          <span class="upload-title">Upload pictures</span>
-          <span class="upload-meta" data-file-summary>No pictures selected</span>
-        </label>
-
-        <div class="contact-grid">
-          <label class="field-group" for="name">
-            <span>Name</span>
-            <input id="name" name="name" type="text" autocomplete="name" required>
-          </label>
-
-          <label class="field-group" for="phone">
-            <span>Phone number</span>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" required>
-          </label>
-
-          <label class="field-group zip-field" for="zipCode">
-            <span>ZIP code</span>
-            <input id="zipCode" name="zipCode" type="text" inputmode="numeric" autocomplete="postal-code" required>
-          </label>
-        </div>
-
-        <button class="submit-button" type="submit">
-          <span class="loading-dot" aria-hidden="true"></span>
-          <span data-submit-text>Submit Request</span>
-        </button>
-
-        <div class="form-message" role="status" aria-live="polite" data-form-message></div>
-      </form>
+      <div class="tally-embed-wrap">
+        <iframe
+          class="tally-embed"
+          data-tally-src="https://tally.so/embed/QKOOW1?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          loading="lazy"
+          width="100%"
+          height="520"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="New Client Quote Request"
+        ></iframe>
+      </div>
     </section>
   </main>
 
-  <script src="../quote-request/quote.js?v=3"></script>
+  <script src="https://tally.so/widgets/embed.js"></script>
 </body>
 </html>
