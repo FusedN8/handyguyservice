@@ -1,35 +1,48 @@
-# HandyGuy Service (Static Copy)
+# HandyGuy Service
 
-A static recreation of [handyguyservice.com](https://handyguyservice.com/), extracted for local development and customization.
+HandyGuy Service website with a React + Next.js quote request page prepared for future AI and admin dashboard integrations.
 
 ## Pages
 
-- `index.html` — Homepage (hero video, gallery, services, testimonials, calendar, FAQ)
-- `contact.html` — Contact form (submits via [FormSubmit](https://formsubmit.co) to `handyguyserviceinfo@gmail.com`)
+- `index.html` - Homepage with gallery, services, testimonials, calendar, and FAQ.
+- `contact.html` - Contact form that submits through FormSubmit to `handyguyserviceinfo@gmail.com`.
+- `/request-a-quote` - Next.js quote request page for new clients.
+- `/existing-client-request` - Shorter Next.js request page for existing clients.
+- `/existing-client-request?client=client-name` - Existing-client request page with a hidden client code included in the email submission.
 
-## Run locally
+## Run Locally
 
 ```bash
-# Python
-python3 -m http.server 8080
-
-# or Node
-npx serve .
+npm install
+npm run dev
 ```
 
-Open [http://localhost:8080](http://localhost:8080).
+Open [http://localhost:3000/request-a-quote](http://localhost:3000/request-a-quote) for new clients or [http://localhost:3000/existing-client-request](http://localhost:3000/existing-client-request) for existing clients.
+
+If port `3000` is already in use:
+
+```bash
+npm run dev -- --port 3005
+```
+
+Then open [http://localhost:3005/request-a-quote](http://localhost:3005/request-a-quote).
+
+## Quote Request App
+
+- `app/request-a-quote/page.tsx` renders the new-client quote page.
+- `app/existing-client-request/page.tsx` renders the shorter existing-client request page.
+- `components/quote-request-shell.tsx` provides the shared client-facing form layout.
+- `components/quote-request-form.tsx` sends quote details and uploaded pictures to `handyguyserviceinfo@gmail.com` through FormSubmit.
+- `app/api/quote-requests/route.ts` is the future integration point for file storage, AI triage, notifications, and an admin dashboard.
+
+## Picture Uploads
+
+Quote request pictures are submitted as email attachments through FormSubmit using `multipart/form-data`. Uploads are temporary from the website's perspective: the app does not store the files, and you receive the request in email. The form limits selected pictures to 10 MB total before submission.
 
 ## Assets
 
-Images are stored under `assets/images/`. Gallery thumbnails live in `assets/images/gallery/`; full-resolution lightbox images are in `assets/images/gallery/full/` (sourced from the original site's `-scaled` uploads). The hero uses a self-hosted background video (`assets/images/hero-video.mp4`) with no player controls. The availability section embeds the original Google Calendar.
+Images are stored under `assets/images/`. Gallery thumbnails live in `assets/images/gallery/`; full-resolution lightbox images are in `assets/images/gallery/full/`. The hero uses a self-hosted background video at `assets/images/hero-video.mp4`, and the availability section embeds the Google Calendar.
 
-## Contact form (GitHub Pages)
+## Contact Form
 
-Submissions are handled by **FormSubmit** (free for static sites). The form POSTs to `https://formsubmit.co/handyguyserviceinfo@gmail.com` and FormSubmit forwards the message to that inbox.
-
-**One-time setup:** After the first real submission (or a test), FormSubmit emails `handyguyserviceinfo@gmail.com` an activation link. Click it to start receiving messages.
-
-The simple math captcha (5+6) is still checked in the browser before submit. A honeypot field (`_honey`) helps block bots.
-
-## Notes
-- Original Elementor CSS snapshots are in `assets/post-2805.css` and `assets/post-2733.css` for reference.
+Submissions from `contact.html` are handled by FormSubmit. The simple math captcha is checked in the browser before submit, and a honeypot field helps block bots.
