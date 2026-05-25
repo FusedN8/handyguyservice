@@ -228,6 +228,11 @@ h1 {
   color: var(--error);
 }
 
+.form-message a {
+  color: inherit;
+  font-weight: 800;
+}
+
 .thank-you-panel {
   text-align: center;
 }

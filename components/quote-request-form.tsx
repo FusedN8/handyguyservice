@@ -6,6 +6,7 @@ import type { QuoteRequestConfig } from "@/lib/quote-request-types";
 type SubmitState = "idle" | "loading" | "success" | "error";
 
 const successMessage = "Thank you. Your request has been received and will be reviewed shortly.";
+const fallbackMessage = "The upload service is temporarily unavailable. Please email the description and pictures to handyguyserviceinfo@gmail.com.";
 const formSubmitEndpoint = "https://formsubmit.co/ajax/handyguyserviceinfo@gmail.com";
 const maxUploadBytes = 10 * 1024 * 1024;
 
@@ -59,7 +60,7 @@ export function QuoteRequestForm({ config, clientCode = "" }: { config: QuoteReq
       setFileSummary("No pictures selected");
     } catch (error) {
       setSubmitState("error");
-      setMessage(error instanceof Error ? error.message : "Unable to submit request.");
+      setMessage(error instanceof Error ? error.message : fallbackMessage);
     }
   }
 
