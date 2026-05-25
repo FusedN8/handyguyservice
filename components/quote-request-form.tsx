@@ -6,7 +6,7 @@ import type { QuoteRequestConfig } from "@/lib/quote-request-types";
 type SubmitState = "idle" | "loading" | "success" | "error";
 
 const successMessage = "Thank you. Your request has been received and will be reviewed shortly.";
-const fallbackMessage = "The upload service is temporarily unavailable. Please email the description and pictures to handyguyserviceinfo@gmail.com.";
+const fallbackMessage = "The upload service is temporarily unavailable. Please send the description and pictures by email instead.";
 const formSubmitEndpoint = "https://formsubmit.co/ajax/handyguyserviceinfo@gmail.com";
 const maxUploadBytes = 10 * 1024 * 1024;
 

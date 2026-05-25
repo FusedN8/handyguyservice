@@ -2,7 +2,7 @@
   const endpoint = "https://formsubmit.co/ajax/handyguyserviceinfo@gmail.com";
   const maxUploadBytes = 10 * 1024 * 1024;
   const successMessage = "Thank you. Your request has been received and will be reviewed shortly.";
-  const fallbackMessage = "The upload service is temporarily unavailable. Please email the description and pictures to handyguyserviceinfo@gmail.com.";
+  const fallbackMessage = "The upload service is temporarily unavailable. Please send the description and pictures by email instead.";
   const params = new URLSearchParams(window.location.search);
   const clientCode = params.get("client") || "";
 
@@ -62,8 +62,19 @@
         message.className = "form-message success";
         message.textContent = payload.message || successMessage;
       } catch (error) {
+        const description = form.querySelector("[name='description']")?.value || "";
+        const client = form.querySelector("[name='client']")?.value || "";
+        const subject = encodeURIComponent("Quote request photos - HandyGuy Service");
+        const bodyLines = [
+          client ? `Client: ${client}` : "",
+          description ? `Project description: ${description}` : "",
+          "",
+          "Please attach your pictures to this email before sending."
+        ].filter(Boolean);
+        const mailto = `mailto:handyguyserviceinfo@gmail.com?subject=${subject}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+
         message.className = "form-message error";
-        message.innerHTML = `${error instanceof Error ? error.message : fallbackMessage} <a href="mailto:handyguyserviceinfo@gmail.com">Email photos instead</a>.`;
+        message.innerHTML = `${fallbackMessage} <a href="${mailto}">Email photos instead</a>.`;
       } finally {
         form.classList.remove("is-loading");
         form.querySelector("button[type='submit']").disabled = false;
