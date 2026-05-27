@@ -92,7 +92,7 @@ h1 {
 .home-link {
   display: block;
   width: fit-content;
-  margin: -10px auto 18px;
+  margin: 18px auto 0;
   color: #6f746f;
   font-size: 0.92rem;
   font-weight: 700;
