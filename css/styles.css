@@ -571,6 +571,7 @@ a {
   font-weight: 600;
   font-size: 0.9rem;
   z-index: 1;
+  text-align: center;
 }
 
 /* Lightbox */
@@ -1326,6 +1327,7 @@ body.lightbox-open {
     min-height: 3.25rem;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
     padding: 0.7rem 0.75rem;
     font-size: 0.82rem;
     line-height: 1.25;
