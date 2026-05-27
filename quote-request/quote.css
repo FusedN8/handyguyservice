@@ -80,6 +80,15 @@ h1 {
   white-space: nowrap;
 }
 
+.quote-greeting {
+  margin: 0 0 6px;
+  color: #6f746f;
+  font-size: clamp(1rem, 3vw, 1.18rem);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
 .quote-form {
   display: grid;
   gap: 16px;

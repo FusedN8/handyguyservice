@@ -5,6 +5,16 @@
   const fallbackMessage = "The upload service is temporarily unavailable. Please send the description and pictures by email instead.";
   const params = new URLSearchParams(window.location.search);
   const clientCode = params.get("client") || "";
+  const clientName = clientCode
+    .replace(/[-_]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/\b\w/g, (letter) => letter.toUpperCase());
+
+  document.querySelectorAll("[data-client-greeting]").forEach((greeting) => {
+    greeting.textContent = clientName ? `Hi ${clientName}` : "Hi";
+    greeting.hidden = false;
+  });
 
   document.querySelectorAll("[data-tally-client-src]").forEach((iframe) => {
     const src = new URL(iframe.getAttribute("data-tally-client-src"));
