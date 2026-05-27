@@ -283,11 +283,14 @@ h1 {
   }
 
   .quote-header {
+    grid-template-columns: 1fr;
     gap: 12px;
+    text-align: center;
   }
 
   .quote-logo {
     width: min(136px, 39vw);
+    margin-inline: auto;
   }
 
   h1 {
@@ -296,5 +299,28 @@ h1 {
 
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .quote-panel {
+    padding: 18px;
+  }
+
+  .quote-header {
+    gap: 10px;
+  }
+
+  .quote-logo {
+    width: min(118px, 36vw);
+  }
+
+  h1 {
+    font-size: clamp(1.32rem, 6vw, 1.65rem);
+  }
+
+  .tally-embed-wrap,
+  .tally-embed {
+    min-height: 560px;
   }
 }
