@@ -1323,6 +1323,12 @@ body.lightbox-open {
     aspect-ratio: 1.1 / 1;
   }
 
+  .gallery-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - 0.65rem) / 2);
+  }
+
   .gallery-item span {
     min-height: 3.25rem;
     display: flex;
