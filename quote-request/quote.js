@@ -6,6 +6,14 @@
   const params = new URLSearchParams(window.location.search);
   const clientCode = params.get("client") || "";
 
+  document.querySelectorAll("[data-tally-client-src]").forEach((iframe) => {
+    const src = new URL(iframe.getAttribute("data-tally-client-src"));
+    if (clientCode) {
+      src.searchParams.set("client", clientCode);
+    }
+    iframe.setAttribute("data-tally-src", src.toString());
+  });
+
   document.querySelectorAll("[data-quote-form]").forEach((form) => {
     const fileInput = form.querySelector("[data-file-input]");
     const fileSummary = form.querySelector("[data-file-summary]");
