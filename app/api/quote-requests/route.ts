@@ -45,7 +45,7 @@ export async function POST(request: Request) {
   // Future integration point: persist requestRecord, upload files, queue AI triage,
   // then surface the request in an admin dashboard.
   return NextResponse.json({
-    message: "Thank you. Your request has been received and will be reviewed shortly.",
+    message: "Thanks. Your request has been received and will be reviewed shortly.",
     request: requestRecord
   });
 }

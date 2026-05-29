@@ -1,7 +1,7 @@
 (function () {
   const endpoint = "https://formsubmit.co/ajax/handyguyserviceinfo@gmail.com";
   const maxUploadBytes = 10 * 1024 * 1024;
-  const successMessage = "Thank you. Your request has been received and will be reviewed shortly.";
+  const successMessage = "Thanks. Your request has been received and will be reviewed shortly.";
   const fallbackMessage = "The upload service is temporarily unavailable. Please send the description and pictures by email instead.";
   const params = new URLSearchParams(window.location.search);
   const clientCode = params.get("client") || "";
