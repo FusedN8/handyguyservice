@@ -146,7 +146,7 @@ a {
 }
 
 .logo img {
-  height: 34px;
+  height: 30px;
   width: auto;
   object-fit: contain;
 }
@@ -1251,7 +1251,7 @@ body.lightbox-open {
   }
 
   .logo img {
-    height: 28px;
+    height: 25px;
     max-width: 76vw;
   }
 

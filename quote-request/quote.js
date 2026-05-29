@@ -85,7 +85,7 @@
         const subject = encodeURIComponent("Quote request photos - HandyGuy Service");
         const bodyLines = [
           client ? `Client: ${client}` : "",
-          description ? `Project description: ${description}` : "",
+          description ? `Project details: ${description}` : "",
           "",
           "Please attach your pictures to this email before sending."
         ].filter(Boolean);

@@ -13,7 +13,7 @@ export async function POST(request: Request) {
   }
 
   if (!description) {
-    return NextResponse.json({ message: "Project description is required." }, { status: 400 });
+    return NextResponse.json({ message: "Tell us about your project is required." }, { status: 400 });
   }
 
   if (mode === "new_client") {

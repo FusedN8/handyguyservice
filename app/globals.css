@@ -95,6 +95,18 @@ h1 {
   white-space: nowrap;
 }
 
+.quote-greeting {
+  margin: 10px 0 8px;
+}
+
+.quote-intro {
+  margin-top: 16px;
+}
+
+.quote-greeting + .quote-intro {
+  margin-top: 12px;
+}
+
 .quote-form {
   display: grid;
   gap: 16px;
@@ -169,6 +181,13 @@ h1 {
 .upload-title {
   color: var(--ink);
   font-weight: 800;
+}
+
+.upload-helper {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.35;
 }
 
 .upload-meta {

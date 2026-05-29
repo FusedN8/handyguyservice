@@ -69,7 +69,7 @@ export function QuoteRequestForm({ config, clientCode = "" }: { config: QuoteReq
       <input type="hidden" name="mode" value={config.mode} />
 
       <label className="field-group" htmlFor={`${config.mode}-description`}>
-        <span>Project description</span>
+        <span>Tell Us About Your Project</span>
         <textarea
           id={`${config.mode}-description`}
           name="description"
@@ -91,7 +91,8 @@ export function QuoteRequestForm({ config, clientCode = "" }: { config: QuoteReq
             setFileSummary(count === 0 ? "No pictures selected" : `${count} picture${count === 1 ? "" : "s"} selected`);
           }}
         />
-        <span className="upload-title">Upload pictures</span>
+        <span className="upload-title">Upload Photos (Recommended for Faster Quotes)</span>
+        <span className="upload-helper">The more details and photos you provide, the more accurate your quote will be.</span>
         <span className="upload-meta">{fileSummary}</span>
       </label>
 

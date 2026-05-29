@@ -83,7 +83,7 @@ h1 {
 }
 
 .quote-greeting {
-  margin: 0 0 6px;
+  margin: 10px 0 8px;
   color: #6f746f;
   font-size: clamp(1rem, 3vw, 1.18rem);
   font-weight: 700;
@@ -93,12 +93,16 @@ h1 {
 
 .quote-intro {
   max-width: 440px;
-  margin: 10px auto 0;
+  margin: 16px auto 0;
   color: #6f746f;
   font-size: 0.96rem;
   font-weight: 600;
   line-height: 1.45;
   text-align: center;
+}
+
+.quote-greeting + .quote-intro {
+  margin-top: 12px;
 }
 
 .home-link {
@@ -198,6 +202,13 @@ h1 {
 .upload-title {
   color: var(--ink);
   font-weight: 800;
+}
+
+.upload-helper {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.35;
 }
 
 .upload-meta {
