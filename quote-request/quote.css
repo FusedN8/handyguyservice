@@ -89,6 +89,16 @@ h1 {
   text-align: center;
 }
 
+.quote-intro {
+  max-width: 360px;
+  margin: 10px auto 0;
+  color: #6f746f;
+  font-size: 0.96rem;
+  font-weight: 600;
+  line-height: 1.45;
+  text-align: center;
+}
+
 .home-link {
   display: block;
   width: fit-content;
