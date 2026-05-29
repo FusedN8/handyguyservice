@@ -320,9 +320,9 @@ h1 {
   }
 
   .quote-header {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr;
     gap: 12px;
-    text-align: left;
+    text-align: center;
   }
 
   .quote-logo {
