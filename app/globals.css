@@ -71,10 +71,11 @@ textarea {
 }
 
 .quote-logo {
-  width: min(176px, 42vw);
+  width: min(220px, 52vw);
   height: auto;
   flex: 0 0 auto;
   display: block;
+  object-fit: contain;
 }
 
 .eyebrow {
@@ -267,7 +268,7 @@ h1 {
   }
 
   .quote-logo {
-    width: min(136px, 39vw);
+    width: min(176px, 48vw);
   }
 
   h1 {

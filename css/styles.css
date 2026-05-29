@@ -148,6 +148,7 @@ a {
 .logo img {
   height: 34px;
   width: auto;
+  object-fit: contain;
 }
 
 .site-nav {
@@ -1056,6 +1057,7 @@ body.lightbox-open {
   height: 28px;
   width: auto;
   margin-bottom: 0.75rem;
+  object-fit: contain;
 }
 
 .footer-brand p,
