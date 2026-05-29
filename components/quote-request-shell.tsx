@@ -16,7 +16,7 @@ export function QuoteRequestShell({
     <main className="page-shell">
       <section className="quote-panel" aria-labelledby="page-title">
         <header className="quote-header">
-          <img className="quote-logo" src="/images/handyguy-service-logo-site.webp" alt="HandyGuy Service" width="300" height="34" />
+          <img className="quote-logo" src="/images/handyguy-service-logo-light.webp" alt="HandyGuy Service" width="800" height="116" />
           <div>
             {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
             <h1 id="page-title">Request a Quote</h1>
