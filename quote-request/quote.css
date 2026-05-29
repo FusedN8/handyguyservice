@@ -58,7 +58,7 @@ textarea {
   grid-template-columns: 1fr;
   align-items: center;
   gap: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
 
 .quote-header > div {
@@ -70,7 +70,7 @@ textarea {
   width: min(220px, 52vw);
   height: auto;
   display: block;
-  margin-inline: 0;
+  margin: 0 0 8px;
   object-fit: contain;
 }
 
@@ -130,6 +130,7 @@ h1 {
 
 .tally-embed-wrap {
   min-height: 520px;
+  margin-top: -6px;
 }
 
 .tally-embed {
