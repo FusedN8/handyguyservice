@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Request a Quote",
   description: "Fast quote request form for handyman and business services.",
   icons: {
-    icon: "/images/handyguy-service-logo-transparent.webp"
+    icon: "/images/handyguy-service-logo-site.webp"
   }
 };
 
