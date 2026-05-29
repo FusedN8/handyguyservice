@@ -55,7 +55,7 @@ textarea {
 
 .quote-header {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr;
   align-items: center;
   gap: 16px;
   margin-bottom: 24px;
@@ -70,6 +70,7 @@ textarea {
   width: min(176px, 42vw);
   height: auto;
   display: block;
+  margin-inline: 0;
 }
 
 h1 {
